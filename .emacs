@@ -2,9 +2,13 @@
 (add-to-list 'package-archives
   '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
+
+(require 'monokai-theme)
+(require 'go-mode)
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 (ac-config-default)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
