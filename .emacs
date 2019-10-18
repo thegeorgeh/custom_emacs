@@ -7,12 +7,12 @@
 (require 'go-mode)
 (require 'auto-complete)
 
-// go get -u github.com/mdempsky/gocode
+;; go get -u github.com/mdempsky/gocode
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 (ac-config-default)
 
-// go get golang.org/x/tools/cmd/goimports
+;; go get golang.org/x/tools/cmd/goimports
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 
