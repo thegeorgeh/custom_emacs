@@ -1,7 +1,30 @@
 (require 'package)
 (add-to-list 'package-archives
-  '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+  '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
+
+
+
+(defun my/racer-mode-hook ()
+  (ac-racer-setup))
+(add-hook 'racer-mode-hook 'my/racer-mode-hook)
+
+;;(add-hook 'racer-mode-hook #'company-mode)
+
+(require 'rust-mode)
+;;(define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+;;(setq company-tooltip-align-annotations t)
+
+;;(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ ;;'(inhibit-startup-screen t)
+ ;;'(racer-cmd (expand-file-name "~/src/racer/target/release/racer"))
+ ;;'(racer-rust-src-path (expand-file-name "~/src/rustc/src")))
+
+
 
 (require 'monokai-theme)
 (require 'go-mode)
@@ -16,16 +39,19 @@
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (monokai)))
- '(custom-safe-themes (quote ("5f27195e3f4b85ac50c1e2fac080f0dd6535440891c54fcfa62cdcefedf56b1b" default))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'upcase-region 'disabled nil)
+
+ 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(inhibit-startup-screen t))
