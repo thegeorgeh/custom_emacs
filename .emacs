@@ -27,6 +27,7 @@
 
 
 (require 'monokai-theme)
+(load-theme 'monokai-theme)
 (require 'yafolding)
 
 
@@ -69,4 +70,4 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (yafolding go-imports go-complete ac-racer company arduino-mode processing-mode company-terraform treemacs racer monokai-theme go-fill-struct go-autocomplete flymake-rust flycheck-rust company-racer company-go))))
+    (go-imports go-complete ac-racer company arduino-mode processing-mode company-terraform treemacs racer monokai-theme go-fill-struct go-autocomplete flymake-rust flycheck-rust company-racer company-go))))
